@@ -16,7 +16,14 @@
 				return decodeURI(results[1]) || 0;
 			}
 		}
-		console.log($.urlParam('src'));
+
+		var src = $.urlParam('src');
+		var link = $.urlParam('link');
+		var out;
+		if(src == 1) {
+			out = 'https://auto.ria.com/'+link;
+		}
+		console.log(out);
 	</script>
 </body>
 </html>
