@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
 	<meta charset="UTF-8">
-	<title>untitle</title>
+	<title>Red</title>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -16,14 +16,19 @@
 				return decodeURI(results[1]) || 0;
 			}
 		}
-
 		var src = $.urlParam('src');
 		var link = $.urlParam('link');
 		var out;
 		if(src == 1) {
 			out = 'https://auto.ria.com/'+link;
+		} else if(src == 2) {
+			out = 'https://www.olx.ua/'+link;
 		}
-		console.log(out);
+		if(out != '') {
+			window.location.href = out;
+		} else {
+			document.write('Something wrong')
+		}
 	</script>
 </body>
 </html>
