@@ -20,7 +20,8 @@
 		var link = $.urlParam('link');
 		var out;
 		if(src == 1) {
-			out = 'https://auto.ria.com/'+link;
+			rawurl = link.substr(link.indexOf('/') + 1);
+			out = 'https://auto.ria.com/'+rawurl;
 		} else if(src == 2) {
 			out = 'https://www.olx.ua/'+link;
 		}
